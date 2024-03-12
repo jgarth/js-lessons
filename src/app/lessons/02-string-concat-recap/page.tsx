@@ -20,8 +20,8 @@ export default function Page() {
         <li>Use a string when you want to write out something: letters, words, spaces, numbers, symbols</li>
         <li>Strings are set between single quotes, double quotes, or backticks</li>
         <code>
-          const string1 = 'a'; // Single quotes<br/>
-          const string2 = "b"; // Double quotes<br/>
+          const string1 = &apos;a&apos;; // Single quotes<br/>
+          const string2 = &quot;b&quot;; // Double quotes<br/>
           const string3 = `c`; // Backticks
         </code>
       </ul>

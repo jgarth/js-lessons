@@ -64,7 +64,7 @@ export default function Page() {
         </li>
       </ul>
       <code>
-        const ourFunction = (number) => number * 2;
+        const ourFunction = (number) =&gt; number * 2;
         ourFunction(2); // Returns 4
       </code>
     </SplitWithEditor>

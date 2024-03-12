@@ -52,7 +52,7 @@ export default function Page() {
         <ColorClick colorClass="bg-purple-700">()</ColorClick>
         <ColorClick colorClass="bg-blue-700">&#123;</ColorClick><br/>
         <ColorClick colorClass="bg-green-700">
-          &nbsp;&nbsp;console.log("I like tacos");
+          &nbsp;&nbsp;console.log(&quot;I like tacos&quot;);
         </ColorClick><br/>
         <ColorClick colorClass="bg-blue-700">&#125;</ColorClick><br/>
       </code>

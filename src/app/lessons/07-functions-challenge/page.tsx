@@ -21,7 +21,7 @@ export default function Page() {
           <li>one to divide two numbers</li>
           <li>one to multiply two numbers</li>
         </ul>
-        <p>Example calls and results when you're done:</p>
+        <p>Example calls and results when you&apos;re done:</p>
         <ul className="space-y-1">
           <li><code> add(5, 2) === 7 </code></li>
           <li><code> sub(5, 2) === 3 </code></li>
@@ -46,10 +46,10 @@ export default function Page() {
         </p>
         <p>Example:</p>
         <ul>
-          <li>A user enters "2" in the first text field.</li>
-          <li>The user enters "5" in the second text field.</li>
-          <li>The user presses the "+" button.</li>
-          <li>The result text field now contains the number "7"</li>
+          <li>A user enters &quot;2&quot; in the first text field.</li>
+          <li>The user enters &quot;5&quot; in the second text field.</li>
+          <li>The user presses the &quot;+&quot; button.</li>
+          <li>The result text field now contains the number &quot;7&quot;</li>
         </ul>
       </div>
       <div className="flex flex-col space-y-4">

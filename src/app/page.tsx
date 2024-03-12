@@ -21,6 +21,14 @@ const links = [
     name: 'Functions - returning a value',
     href: '/lessons/05-functions-return',
   },
+  {
+    name: 'Functions - arrow notation',
+    href: '/lessons/06-functions-arrow-notation',
+  },
+  {
+    name: 'Functions - challenges',
+    href: '/lessons/07-functions-challenge',
+  },
 ];
 
 export default function Home() {

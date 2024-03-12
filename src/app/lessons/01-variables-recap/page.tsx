@@ -26,7 +26,7 @@ export default function Page() {
         <ColorClick colorClass="bg-green-500/50 p-2 mr-1">let</ColorClick>
         <ColorClick colorClass="bg-purple-500/50 p-2 mr-1">food</ColorClick>
         <ColorClick colorClass="bg-blue-500/50 p-2 mr-1">=</ColorClick>
-        <ColorClick colorClass="bg-red-500/50 p-2 mr-1">"Tacos"</ColorClick>
+        <ColorClick colorClass="bg-red-500/50 p-2 mr-1">&quot;Tacos&quot;</ColorClick>
         ;
       </code>
       <ul className="list list-disc space-y-4 text-xl">
@@ -40,7 +40,7 @@ export default function Page() {
         <ColorClick colorClass="bg-green-500/50 p-2 mr-1">const</ColorClick>
         <ColorClick colorClass="bg-purple-500/50 p-2 mr-1">drink</ColorClick>
         <ColorClick colorClass="bg-blue-500/50 p-2 mr-1">=</ColorClick>
-        <ColorClick colorClass="bg-red-500/50 p-2 mr-1">"Water"</ColorClick>
+        <ColorClick colorClass="bg-red-500/50 p-2 mr-1">&quot;Water&quot;</ColorClick>
         ;
       </code>
     </SplitWithEditor>

@@ -44,7 +44,7 @@ export default function Page() {
         <ColorClick colorClass="bg-yellow-700">food2</ColorClick>
         <ColorClick colorClass="bg-purple-700">)</ColorClick>
         &#123;<br/>
-        &nbsp;&nbsp;console.log("I like " + food1 + " and " + food2);
+        &nbsp;&nbsp;console.log(&quot;I like &quot; + food1 + &quot; and &quot; + food2);
         <br/>
         &#125;
       </code>

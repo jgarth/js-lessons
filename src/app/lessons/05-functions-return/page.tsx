@@ -23,7 +23,7 @@ export default function Page() {
     `}>
       <p>
         You can use function return values when you want to
-        do more with the result of your function's steps.
+        do more with the result of your function&apos;s steps.
       </p>
       <p>To add a return to a function:</p>
       <ul className="list list-disc space-y-4 text-xl">
