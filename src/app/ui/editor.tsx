@@ -1,7 +1,11 @@
+'use client'
+
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { dracula } from '@uiw/codemirror-theme-dracula';
 import { useState, useCallback, useEffect } from 'react';
+import { ArrowUturnLeftIcon }
+  from '@heroicons/react/24/solid'
 
 const extensions = [javascript({ jsx: true })];
 
@@ -34,7 +38,12 @@ export default function Editor({ children, className }) {
   const [error, setError] = useState();
 
   const runCode = (code) => {
-    setError(null);
+
+    if(code.match(/alert\s*\(/)) {
+      setError("Cannot use function alert() here.");
+      return
+    }
+
     try {
 
       // Skip if code entered ends with . or has unbalanced curly braces
@@ -51,7 +60,7 @@ export default function Editor({ children, className }) {
               return JSON.stringify(arg);
             } catch (error) {
               // Handle circular references or other stringify errors
-              return "Cannot format object";
+              throw "Error: cannot format object";
             }
           } else {
             // Use toString for primitives for simplicity
@@ -67,27 +76,37 @@ export default function Editor({ children, className }) {
       eval?.(`(console) => {
         ${code}
       }`)(fakeConsole);
+      setError(null);
       setResult(evalResult);
     } catch(e) {
-      setResult(null);
       setError(e.toString());
+      setResult(null);
     }
   };
 
   const onChange = useCallback((val, viewUpdate) => {
-    const cleaned = unindent(trim(val));
-    setValue(cleaned);
+    setValue(val);
   }, []);
 
   useEffect(() => runCode(value), [value]);
 
+  const resetCode = () => {
+    setValue(initialCode);
+  }
+
   return (
-    <div className={`flex flex-col justify-between p-8 gap-8 ${className}`}>
-      <div className="h-1/2 mb-4">
-        <div>
-          <p className="mb-2">Code</p>
+    <div className={`flex flex-col justify-between p-8 gap-8 space-y-8 ${className}`}>
+      <div className="min-h-[50%] max-h-[50%]">
+        <div className="flex flex-row justify-between mb-2 items-center">
+          <p className="text-lg">Code</p>
+          <button
+            onClick={resetCode}
+            className="text-md py-2 px-4 rounded-lg bg-[#282A36] flex items-center justify-between">
+            <ArrowUturnLeftIcon className="h-4 w-4 mr-2 text-white" />
+            Reset
+          </button>
         </div>
-        <div className="bg-[#282A36] py-2 rounded-lg overflow-scroll max-h-full">
+        <div className="bg-[#282A36] py-2 rounded-lg overflow-scroll max-h-[100%]">
           <CodeMirror
             value={value}
             height="100%"
@@ -99,11 +118,11 @@ export default function Editor({ children, className }) {
             />
         </div>
       </div>
-      <div className="h-1/2 flex flex-col">
+      <div className="h-1/2 flex flex-col gap-4">
         <div>
-          <p className="mb-2">Output</p>
+          <p className="text-lg">Output</p>
         </div>
-        <pre className="px-9 py-4 bg-[#282A36] text-xl text-wrap font-mono self-stretch h-full rounded-lg">
+        <pre className="px-9 py-4 bg-[#282A36] text-xl text-wrap font-mono overflow-scroll h-full rounded-lg">
           { error &&
             error
           }
