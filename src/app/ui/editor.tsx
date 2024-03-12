@@ -110,7 +110,7 @@ export default function Editor({ children, className }) {
           <CodeMirror
             value={value}
             height="100%"
-            className="rounded-lg"
+            className="rounded-lg my-4"
             style={{ height: "100%", fontSize: '20px' }}
             theme={dracula}
             extensions={extensions}

@@ -8,11 +8,11 @@ export default function Page() {
       title="Functions"
       subtitle="Return"
       prevLessonLink="/lessons/04-functions-args"
-      nextLessonLink="/lessons/06-functions-challenge"
+      nextLessonLink="/lessons/06-functions-arrow-notation"
     />
     <SplitWithEditor leftWidth="40%" rightWidth="60%" initialCode={`
       function doubleNumber(number) {
-        return number * 2;
+        const result = number * 2;
       }
 
       let number = doubleNumber(2);

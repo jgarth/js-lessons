@@ -7,7 +7,7 @@ export default function Page() {
     <Headline
       title="Functions"
       subtitle="Challenge"
-      prevLessonLink="/lessons/05-functions-return"
+      prevLessonLink="/lessons/06-functions-arrow-notation"
     />
     <div className="grid grid-cols-3 p-12 gap-12">
       <div className="flex flex-col space-y-4">

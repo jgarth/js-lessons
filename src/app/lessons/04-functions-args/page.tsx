@@ -11,11 +11,13 @@ export default function Page() {
       nextLessonLink="/lessons/05-functions-return"
     />
     <SplitWithEditor leftWidth="50%" rightWidth="50%" initialCode={`
-      function sayFavoriteDrink(drink) {
-        console.log("I like " + drink);
+      function introduce() {
+        console.log("Hi, my name is.");
+        console.log("I am years old.");
+        console.log("My favorite food is.");
       }
 
-      sayFavoriteDrink("water");
+      introduce("Josh", 35, "tacos");
     `}>
       <p>
         You can use function arguments when you want to
@@ -43,12 +45,15 @@ export default function Page() {
         <ColorClick colorClass="bg-yellow-700">food2</ColorClick>
         <ColorClick colorClass="bg-purple-700">)</ColorClick>
         &#123;<br/>
-        &nbsp;&nbsp;console.log(<br/>
-         &nbsp;&nbsp;&nbsp;&nbsp;"I like " + food1 + " and " + food2<br/>
-        &nbsp;&nbsp;);
+        &nbsp;&nbsp;console.log("I like " + food1 + " and " + food2);
         <br/>
         &#125;
       </code>
+      <div className="space-y-1 p-8 absolute inset-x-0 bottom-0 text-xs hover:opacity-100 opacity-0">
+        <p>Quiz</p>
+        <p>What happens if you give a function call more arguments?</p>
+        <p>What happens if you give a function call less arguments?</p>
+      </div>
     </SplitWithEditor>
   </>;
 }
