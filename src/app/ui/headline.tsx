@@ -15,7 +15,7 @@ export default function Headline(
   return <>
     <div className="flex flex-row justify-between items-start py-6 px-12">
       { prevLessonLink !== undefined &&
-        <Link key="mainNavBack" href={prevLessonLink}>
+        <Link key={`${title}Prev`} href={prevLessonLink}>
           <ArrowLongLeftIcon className="h-8 w-8 text-white" />
         </Link>
       }
@@ -27,7 +27,7 @@ export default function Headline(
         <h2 className="px-12 text-xl">{subtitle}</h2>
       </div>
       { nextLessonLink !== undefined &&
-        <Link key="mainNavBack" href={nextLessonLink}>
+        <Link key={`${title}Next`} href={nextLessonLink}>
           <ArrowLongRightIcon className="h-8 w-8 text-white" />
         </Link>
       }

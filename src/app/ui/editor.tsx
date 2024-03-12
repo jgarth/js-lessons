@@ -4,8 +4,8 @@ import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { dracula } from '@uiw/codemirror-theme-dracula';
 import { useState, useCallback, useEffect } from 'react';
-import { ArrowUturnLeftIcon }
-  from '@heroicons/react/24/solid'
+import { ArrowUturnLeftIcon, PlayIcon }
+  from '@heroicons/react/24/outline'
 
 const extensions = [javascript({ jsx: true })];
 
@@ -37,7 +37,9 @@ export default function Editor({ children, className }) {
   const [result, setResult] = useState();
   const [error, setError] = useState();
 
-  const runCode = (code) => {
+  const runCode = () => {
+
+    const code = value;
 
     if(code.match(/alert\s*\(/)) {
       setError("Cannot use function alert() here.");
@@ -88,7 +90,7 @@ export default function Editor({ children, className }) {
     setValue(val);
   }, []);
 
-  useEffect(() => runCode(value), [value]);
+  useEffect(() => runCode(), []);
 
   const resetCode = () => {
     setValue(initialCode);
@@ -99,12 +101,20 @@ export default function Editor({ children, className }) {
       <div className="min-h-[50%] max-h-[50%]">
         <div className="flex flex-row justify-between mb-2 items-center">
           <p className="text-lg">Code</p>
-          <button
-            onClick={resetCode}
-            className="text-md py-2 px-4 rounded-lg bg-[#282A36] flex items-center justify-between">
-            <ArrowUturnLeftIcon className="h-4 w-4 mr-2 text-white" />
-            Reset
-          </button>
+          <div className="flex flex-row items-center justify-between gap-2">
+            <button
+              onClick={runCode}
+              className="text-md py-2 px-4 rounded-lg bg-[#282A36] flex items-center justify-between">
+              <PlayIcon className="h-4 w-4 mr-2 text-white" />
+              Run
+            </button>
+            <button
+              onClick={resetCode}
+              className="text-md py-2 px-4 rounded-lg bg-[#282A36] flex items-center justify-between">
+              <ArrowUturnLeftIcon className="h-4 w-4 mr-2 text-white" />
+              Reset
+            </button>
+          </div>
         </div>
         <div className="bg-[#282A36] py-2 rounded-lg overflow-scroll max-h-[100%]">
           <CodeMirror

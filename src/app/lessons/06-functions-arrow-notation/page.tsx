@@ -15,6 +15,8 @@ export default function Page() {
         const result = number * 2;
         return number;
       }
+
+      console.log(double(2));
     `}>
       <p>
         There's a second way to define a function, using <u>arrow notation</u>.

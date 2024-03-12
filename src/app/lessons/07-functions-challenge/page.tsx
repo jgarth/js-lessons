@@ -10,10 +10,9 @@ export default function Page() {
       prevLessonLink="/lessons/06-functions-arrow-notation"
     />
     <div className="grid grid-cols-3 p-12 gap-12">
-      <div className="flex flex-col space-y-4">
-        <p className="mb-8">
+      <div className="flex flex-col space-y-4 border-r border-gray-600">
+        <p className="mb-8 text-3xl">
           Challenge 1
-          <span class="block text-sm">Start here</span>
         </p>
         <p>Write four functions:</p>
         <ul className="list list-decimal list-inside">
@@ -30,12 +29,11 @@ export default function Page() {
           <li><code> div(5, 2) === 2.5 </code></li>
         </ul>
       </div>
-      <div className="flex flex-col space-y-4">
-        <p className="mb-8">
+      <div className="flex flex-col space-y-4 pr-8 border-r border-gray-600">
+        <p className="mb-8 text-3xl">
           Challenge 2
-          <span class="block text-sm">A very real challenge</span>
         </p>
-        <p>Create a website featuring:</p>
+        <p>Create a website with:</p>
         <ul className="list list-decimal list-inside">
           <li>two text fields for numbers</li>
           <li>four buttons, one for each function from the previous challenge</li>
@@ -46,7 +44,7 @@ export default function Page() {
           and run the function indicated by the button (2).
           Put the result in (3).
         </p>
-        <p>Example story:</p>
+        <p>Example:</p>
         <ul>
           <li>A user enters "2" in the first text field.</li>
           <li>The user enters "5" in the second text field.</li>
@@ -55,13 +53,12 @@ export default function Page() {
         </ul>
       </div>
       <div className="flex flex-col space-y-4">
-        <p className="mb-8">
+        <p className="mb-8 text-3xl">
           Challenge 3
-          <span class="block text-sm">Let's see what we can do</span>
         </p>
         <p>
           Imagine your website became really popular overnight, and your users
-          have reported some "bugs" and requested some "features".
+          have reported some bugs and requested some features.
         </p>
         <p>
           Try the following things on your website and make sure they either work as expected, or that the user gets
@@ -75,8 +72,8 @@ export default function Page() {
           <li>Enter a word in one of the text fields instead of a number</li>
           <li>Add exponents and use your multiplication function</li>
           <li>
-            Allow the user to enter numbers as text,
-            like <code>five</code> instead of <code>5</code>.
+            Output the result in words, like<br/>
+            <code>forty five</code> instead of <code>45</code>.
           </li>
         </ul>
       </div>

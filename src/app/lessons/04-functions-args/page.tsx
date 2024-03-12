@@ -13,11 +13,10 @@ export default function Page() {
     <SplitWithEditor leftWidth="50%" rightWidth="50%" initialCode={`
       function introduce() {
         console.log("Hi, my name is.");
-        console.log("I am years old.");
         console.log("My favorite food is.");
       }
 
-      introduce("Josh", 35, "tacos");
+      introduce("Josh", "tacos");
     `}>
       <p>
         You can use function arguments when you want to
