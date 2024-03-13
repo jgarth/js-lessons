@@ -30,16 +30,20 @@ const trim = (string: string) => {
 
 interface EditorProps {
   children: React.ReactNode,
-  className ?: string
+  className ?: string,
+  style?: {
+    width?: string,
+    height?: string
+  }
 }
 
 export default function Editor({ children, className }: EditorProps) {
   const initialCode = unindent(trim(
-    children
+    children.toString()
   ));
-  const [value, setValue] = useState(initialCode);
-  const [result, setResult] = useState();
-  const [error, setError] = useState();
+  const [value, setValue] = useState<string>(initialCode);
+  const [result, setResult] = useState<string>();
+  const [error, setError] = useState<string>();
 
   const runCode = () => {
 

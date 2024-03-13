@@ -1,17 +1,10 @@
 import Editor from '@/app/ui/editor';
 
-type ReactText = string | number;
-type ReactChild = ReactElement | ReactText;
-
-interface ReactNodeArray extends Array<ReactNode> {}
-type ReactFragment = {} | ReactNodeArray;
-type ReactNode = ReactChild | ReactFragment | ReactPortal | boolean | null | undefined;
-
 interface SplitProps {
   leftWidth ?: string,
   rightWidth ?: string,
   initialCode ?: string,
-  children ?: ReactNode
+  children ?: React.ReactNode
 }
 
 
