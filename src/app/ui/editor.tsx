@@ -15,7 +15,8 @@ const unindent = (string: string) => {
 
   // Filter out empty lines and map to get the leading spaces count for each line
   const indentLengths = lines
-    .map((line: string) => (line!.match(/^(\s*)/)[0]?.length || 0));
+    .filter(line => line.trim().length > 0)
+    .map(line => line.match(/^(\s*)/)[0].length);
 
   const minIndent = Math.min(...indentLengths);
 
