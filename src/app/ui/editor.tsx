@@ -10,13 +10,12 @@ import { ArrowUturnLeftIcon, PlayIcon }
 const extensions = [javascript({ jsx: true })];
 
 // Unindent a string with unknown base indentation
-const unindent = (string) => {
-  const lines = string.split('\n');
+const unindent = (string: string) => {
+  const lines: Array<string> = string.split('\n');
 
   // Filter out empty lines and map to get the leading spaces count for each line
   const indentLengths = lines
-  .filter(line => line.trim().length > 0)
-  .map(line => line.match(/^(\s*)/)[0].length);
+    .map((line: string) => (line!.match(/^(\s*)/)[0]?.length || 0));
 
   const minIndent = Math.min(...indentLengths);
 
@@ -25,11 +24,16 @@ const unindent = (string) => {
 }
 
 // Remove leading and trailing blank lines
-const trim = (string) => {
+const trim = (string: string) => {
   return string.replace(/^\s*\n|\n\s*$/g, '');
 }
 
-export default function Editor({ children, className }) {
+interface EditorProps {
+  children: React.ReactNode,
+  className ?: string
+}
+
+export default function Editor({ children, className }: EditorProps) {
   const initialCode = unindent(trim(
     children
   ));

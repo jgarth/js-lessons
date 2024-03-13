@@ -19,7 +19,7 @@ export default function Page() {
       console.log(double(2));
     `}>
       <p>
-        There's a second way to define a function, using <u>arrow notation</u>.
+        There is a second way to define a function, using <u>arrow notation</u>.
       </p>
       <p>To write a function using arrow notation:</p>
       <ul className="list list-disc space-y-4 text-xl">

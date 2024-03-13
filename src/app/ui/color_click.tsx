@@ -2,10 +2,16 @@
 
 import { useState } from 'react';
 
-export default function ColorClick({ colorClass, children, clicked }) {
+interface ColorClickProps {
+  colorClass: string,
+  children: React.ReactNode,
+  clicked ?: boolean
+}
+
+export default function ColorClick({ colorClass, children, clicked }: ColorClickProps) {
   const [wasClicked, setClicked] = useState(clicked !== undefined);
 
-  const onClick = (event) => {
+  const onClick = (event: React.MouseEvent<HTMLSpanElement>) => {
     event.preventDefault();
     setClicked(!wasClicked);
   }
