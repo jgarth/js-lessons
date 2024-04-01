@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-code {
-  @apply text-white;
-}
-
 pre {
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
@@ -13,6 +9,46 @@ pre {
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url('../../public/Montserrat-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Recoleta";
+  src: url('../../public/Recoleta-Bold.woff2') format('woff2');
+}
+
+h1, h2, h3 {
+  font-family: "Recoleta", Serif;
+}
+
+h1 {
+  @apply text-4xl mb-4;
+}
+
+h2 {
+  @apply text-2xl mb-4;
+}
+
+h3 {
+  @apply text-lg mb-4;
+}
+
+html, body {
+  font-family: "Montserrat", Sans-serif;
+}
+
+a {
+  @apply underline underline-offset-2 text-blue-800;
+}
+
+p {
+  @apply mb-6;
+}
+
+/* e32ddc4 - 0944d9c  */
 
 @layer utilities {
   .text-balance {
