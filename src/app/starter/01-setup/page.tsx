@@ -34,7 +34,7 @@ export default function Page() {
             We also need an editor to type out the HTML and CSS that we create
             during the course. For that, we use Visual Studio Code (or &quot;VS Code&quot;
             in short). Go to <a href="https://code.visualstudio.com">code.visualstudio.com</a> and
-            click "Download for macOS". Be sure to click the bigger part of the
+            click &quot;Download for macOS&quot;. Be sure to click the bigger part of the
             button, not the down-facing arrow on the right side.
           </p>
           <p>
