@@ -5,6 +5,10 @@ const links = [
     name: 'Start here',
     href: '/starter/01-setup',
   },
+  {
+    name: 'HTML and CSS',
+    href: '/starter/02-html-and-css-intro',
+  },
 ];
 
 export default function Home() {
