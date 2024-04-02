@@ -85,9 +85,7 @@ export default function Page() {
           displays it like any other text. We can tell the browser that we
           wanted it to be a headline by using an <strong>HTML element</strong>.
           HTML elements start with an <em>opening tag</em> and end with a{" "}
-          <em>closing tag</em>. In between, there's the content. We use
-          different tags for different elements. An element could be: a
-          headline, a paragraph, a list, or many others.
+          <em>closing tag</em>. In between, there's the content.
         </p>
         <div className="grid grid-cols-3 my-6 border border-gray-300 rounded-lg p-6">
           <div className="flex flex-col items-center gap-y-2 text-red-500">
@@ -109,7 +107,16 @@ export default function Page() {
             <div className="">closing tag</div>
           </div>
         </div>
-        <p>Let's modify our website to use these tags and see the result:</p>
+        <p>
+          Let's modify our website to use these tags and see the result. Edit
+          the first line
+        </p>
+        <code className="my-6 block">My first website</code>
+        <p>and surround it with an opening tag and a closing tag</p>
+        <code className="my-6 block">
+          &lt;h1&gt;My first website&lt;/h1&gt;
+        </code>
+        <p>Check out the result in your live preview:</p>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <Image
             src={vsCodeWithHeadlineTagged}
@@ -122,11 +129,20 @@ export default function Page() {
         </div>
         <p>
           Done! The browser knows that &quot;My first website&quot; should be a
-          headline, because we used the HTML tag for headlines: <code>&lt;h1&gt;</code>
+          headline, because we used the HTML tag for headlines
+          <code>&lt;h1&gt;</code>. We can use other tags to create other
+          elements. For example, the tag <code>&lt;u&gt;</code> is used to
+          create an underlined element. Try it! Surround any word with the{" "}
+          <code>&lt;u&gt;</code> and <code>&lt;/u&gt;</code> tags to make it
+          underlined.
         </p>
         <div className="border border-green-600 bg-green-300/50 rounded-lg p-6">
           <h3>Group Exercise</h3>
-          <div>Set a timer for five minutes. Google to find out which other HTML tags can be used for headlines. Tell someone in the group what you found out.</div>
+          <div>
+            Set a timer for five minutes. Google to find out which other HTML
+            tags can be used for headlines. Tell someone in the group what you
+            found out.
+          </div>
         </div>
       </div>
     </>
