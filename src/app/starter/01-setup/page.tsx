@@ -19,8 +19,8 @@ export default function Page() {
       <h1>Welcome!</h1>
       <p>
         Before the course commences, we need to setup some applications
-        on your computer to get you started.
-        In this lesson, we will setup
+        on your computer to get you started. After that's done, we'll create
+        your first website together!
       </p>
       <h2 className="mb-4">Download all the prerequisites</h2>
       <ol className="list list-decimal ml-8 space-y-4">
@@ -114,7 +114,7 @@ export default function Page() {
       </p>
       <Image src={pagePreview} alt="Screenshot: page preview" className="mb-6" />
       <p>
-        Congratulations. While this isn't an impressive website <em>yet</em>, we're only
+        Congratulations. While this isn't the most impressive website <em>yet</em>, we're only
         getting started today.
       </p>
       <h2>Helping others</h2>
