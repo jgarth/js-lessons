@@ -25,15 +25,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  @apply text-4xl mb-4;
+  @apply text-4xl mb-6;
 }
 
 h2 {
-  @apply text-2xl mb-4;
+  @apply text-2xl mb-6;
 }
 
 h3 {
-  @apply text-lg mb-4;
+  @apply text-lg mb-6;
 }
 
 html, body {
@@ -46,6 +46,10 @@ a {
 
 p {
   @apply mb-6;
+}
+
+p code {
+  @apply mx-1;
 }
 
 /* e32ddc4 - 0944d9c  */
