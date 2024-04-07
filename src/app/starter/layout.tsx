@@ -11,7 +11,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-xl lg:max-w-3xl mx-auto">
       {children}
     </div>
   );

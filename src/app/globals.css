@@ -24,32 +24,29 @@ h1, h2, h3 {
   font-family: "Recoleta", Serif;
 }
 
-h1 {
-  @apply text-4xl mb-6;
-}
-
-h2 {
-  @apply text-2xl mb-6;
-}
-
-h3 {
-  @apply text-lg mb-6;
-}
-
 html, body {
   font-family: "Montserrat", Sans-serif;
 }
 
-a {
-  @apply underline underline-offset-2 text-blue-800;
+p {
+  @apply mb-4;
 }
 
-p {
-  @apply mb-6;
+p:last-child {
+  @apply mb-0;
 }
 
 p code {
   @apply mx-1;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+hr {
+  @apply my-6;
+  color: #000;
 }
 
 /* e32ddc4 - 0944d9c  */

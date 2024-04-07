@@ -2,13 +2,9 @@ import Link from "next/link";
 
 const sections = [
   {
-    name: 'Javascript Functions',
-    href: '/javascript'
-  },
-  {
     name: 'Starter Curriculum',
     href: '/starter'
-  }
+  },
 ];
 
 export default function Home() {
