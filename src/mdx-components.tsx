@@ -25,6 +25,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: ({ children }) => (
       <pre className="p-2 bg-gray-300/50 rounded-lg my-6">{children}</pre>
     ),
+    strong: ({ children }) => (
+      <strong className="font-medium">{children}</strong>
+    ),
     a: ({ href, children }) => {
       const target = href.startsWith("#") ? "_self" : "_blank";
 
