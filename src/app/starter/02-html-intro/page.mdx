@@ -1,4 +1,5 @@
 import Image from "@/app/ui/image";
+import Link from "next/link";
 
 import copyImageAddressImage from "./copy-image-address.png";
 
@@ -291,10 +292,14 @@ click the link! To add this information, we'll need an _HTML attribute_,
 specifically "`href`". This is written like so:
 
 ```html
-<a href="google.com">Link to google.com</a>
+<a href="https://google.com">Link to google.com</a>
 ```
 
-<div className="grid grid-cols-6 my-6 border border-gray-300 rounded-lg p-6">
+Note: web addresses should start with `https://` most of the time. When we enter
+`google.com` in our browser, the browser adds it for us and goes to the 
+resulting address `https://google.com`.
+
+<div className="grid grid-cols-[minmax(0,_0.5fr),repeat(3,_minmax(0,_1fr)),minmax(0,_0.5fr)] my-6 border border-gray-300 rounded-lg p-6">
   <div className="flex flex-col items-center">
     <div className="text-2xl">
       `<a`
@@ -322,12 +327,6 @@ specifically "`href`". This is written like so:
   <div className="flex flex-col items-center">
     <div className="text-2xl">
       `>`
-    </div>
-    <div className=""></div>
-  </div>
-  <div className="flex flex-col items-center">
-    <div className="text-2xl">
-      `...`
     </div>
     <div className=""></div>
   </div>
@@ -442,3 +441,12 @@ to show where the link is pointing. An `<img/>` tag takes different attributes:
 If you'd like to hear more explanations around our starter topic, give
 [Chapter 1 of this video](https://youtu.be/G3e-cpL7ofc?si=FbbcMALIGcFgdWLU&t=116)
 a watch.
+
+<div className="flex mt-12">
+  <Link
+    href="03-html-practice"
+    className="py-2 px-6 bg-blue-600 rounded-lg text-gray-100"
+  >
+    Continue to next chapter
+  </Link>
+</div>

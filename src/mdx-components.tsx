@@ -23,7 +23,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <ol className="list list-disc ml-[26px] mb-6 space-y-2">{children}</ol>
     ),
     pre: ({ children }) => (
-      <pre className="p-2 bg-gray-300/50 rounded-lg my-6">{children}</pre>
+      <pre className="my-6">{children}</pre>
     ),
     strong: ({ children }) => (
       <strong className="font-medium">{children}</strong>

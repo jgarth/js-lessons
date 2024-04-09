@@ -13,10 +13,10 @@ const links = [
     name: 'Learn about HTML',
     href: '/starter/02-html-intro',
   },
-  // {
-  //   name: 'Learn about CSS',
-  //   href: '/starter/03-css-intro'
-  // }
+  {
+    name: 'Practise HTML',
+    href: '/starter/03-html-practice',
+  }
 ];
 
 export default function Home() {

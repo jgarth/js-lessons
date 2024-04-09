@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@/highlight-js-idea.min.css"
 
 export const metadata: Metadata = {
   title: "Take2 Starter",
